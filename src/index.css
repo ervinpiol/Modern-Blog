@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@300;400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+  @apply box-border p-0 m-0;
+}
+
+:root {
+  --dark-blue: #0c1326;
+  --white: #fefeff;
+  --light-grey: #b3b3b3;
+  --primary: #162246;
+  --sky-blue: #20d1fd;
+  --black-purple: #332f3d;
+  --blue-black: #070f1f;
+  --black-lighter: #212122;
+  --gray: #888;
+  --black: black;
+}
+
+body {
+  @apply overflow-x-hidden font-Inter bg-DarkBlue text-White;
+}
+
+.glow {
+  z-index: -1;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 40%,
+      var(--dark-blue) 90%
+    ),
+    url("./assets/gradients/GlowBlue.png");
+  background-position: 0 0, 50% 0;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+}
+
+.gradient-bottom {
+  background-image: linear-gradient(to bottom, transparent 50%, var(--primary));
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.gradient-blue {
+  background-image: linear-gradient(
+    to right,
+    var(--primary),
+    var(--blue-black)
+  );
+}
+
+.cta-bg {
+  max-width: 1140px;
+  background-image: url("./assets/portrait/Abstract.jpg");
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-gradient {
+  background-image: linear-gradient(to bottom, transparent, var(--primary));
+}
+
+.right-gradient {
+  background-image: linear-gradient(to right, transparent, var(--primary));
+}
+
+#phone-input {
+  -moz-appearance: textfield;
+}
+
+.black-gradient {
+  background-image: linear-gradient(to bottom, black, var(--primary));
+}
+
+.slick-track {
+  @apply flex items-center;
+}
+
+.text-bottom-gradient {
+  background-image: linear-gradient(to bottom, transparent 20%, var(--primary));
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.active {
+  @apply underline;
+}
